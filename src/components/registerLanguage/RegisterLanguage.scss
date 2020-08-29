@@ -1,0 +1,64 @@
+@import '../../scss/variables/variables';
+@import '../../scss/mixins/mixins';
+// .SelectHeight {
+//   height: calc(2em + 1rem + 2px);
+//   width: 100%;
+//   text-align: center;
+//   padding: 0.5rem;
+//   border-radius: 4px;
+//   border-color: rgb(219, 217, 217);
+//   text-indent: 5px;
+//   display: block;
+//   font-size: 18px;
+//   text-align-last: center;
+//   &:active,
+//   &:hover,
+//   &:visited,
+//   &:focus {
+//     outline: none;
+//     border: 1px solid $secondary;
+//     box-shadow: 0px 0px 5px $secondary;
+//   }
+//   & > option {
+//     text-align: center;
+//     text-align-last: center;
+//     &:hover {
+//       outline: none;
+//       border: 1px solid $primary;
+//     }
+//   }
+// }
+.home-dropdown {
+  font-size: 18px;
+  & > button,
+  & > .dropdown-menu {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    transition: 0.2s all ease;
+    text-align: center !important;
+    & > a {
+      padding: 0.7rem;
+      &:hover {
+        background-color: $primary;
+        color: white;
+      }
+    }
+  }
+  & > button {
+    border: 1px solid #c3c3c3;
+    // box-shadow: 0px 0px 2px #c3c3c3;
+    padding: 10px;
+  }
+  .btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &:after {
+      position: absolute;
+      border-top-color: $primary;
+      @include ltr(right, 2rem);
+      @include rtl(left, 2rem);
+    }
+  }
+}

@@ -1,0 +1,223 @@
+@import '../../../scss/main/main-ltr';
+@import '../../../scss/main/main-rtl';
+.navContainer {
+  background-color: $primary;
+  padding-right: 15px;
+  padding-left: 15px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99;
+  width: 100%;
+}
+.navInner {
+  display: flex;
+  width: 100%;
+  height: 64px;
+  // height: 4rem;
+  // @media screen and (max-width: 991.98px) {
+  //   height: 5rem;
+  // }
+  @include rtl(font-family, $font-2-bold-ar);
+}
+.inner {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.navSide {
+  display: flex;
+  align-items: center;
+  color: #ffffff;
+  font-size: 0.9rem;
+
+  @media screen and (max-width: 991.98px) {
+    display: none;
+  }
+
+  .account {
+    display: flex;
+    flex-flow: column;
+  }
+
+}
+.name {
+  & > img {
+    position: relative;
+  }
+  & > span {
+    position: absolute;
+    z-index: 2;
+    color: red;
+    border: 1px solid $primary;
+    box-shadow: 0px 0px 3px $primary;
+    border-radius: 20rem;
+    top: -8px;
+    @include ltr(left, 1px);
+    @include rtl(right, 1px);
+    min-width: 17.8px;
+  }
+}
+ul.NavList {
+  display: flex;
+  // width: 100%;
+  height: 100%;
+  align-items: center;
+  line-height: 100%;
+  color: white;
+  margin: 0px;
+  padding: 0px;
+  li {
+    // flex: 1;
+    &:focus {
+      outline: 0px;
+    }
+    a {
+      color: white;
+      text-decoration: none;
+      display: inline-block;
+      line-height: 100%;
+      padding: 1.5rem;
+      width: 100%;
+      &:focus {
+        outline: none;
+        border: 1px solid $secondary;
+      }
+      @include rtl(font-family, $font-2-bold-ar);
+      &:hover {
+        text-decoration: none;
+        background-color: $secondary;
+        color: white;
+        border: none;
+      }
+    }
+  }
+}
+.TogglerBtn {
+  display: none;
+}
+
+@media screen and (max-width: 991.98px) {
+
+  ul.NavList {
+    // z-index: 200;
+    display: block;
+    background: $primary;
+    // position: fixed;
+    top: 9rem;
+    width: 100%;
+    @include ltr(right, 0);
+    @include rtl(left, 0);
+    transition: 0.3s ease-in-out all;
+    li {
+      width: 100%;
+      text-align: center;
+    }
+  }
+  .LangRes {
+    position: static;
+    display: none;
+  }
+  .NavOpen {
+    height: 100%;
+    // height: 300px !important;
+    position: fixed;
+    height: 100% !important;
+    width: 100%;
+    z-index: 99;
+    background: #0065c3;
+  }
+  .NavClose {
+    height: 0px !important;
+    li {
+      display: none;
+    }
+  }
+  .TogglerBtn {
+    display: block;
+    position: fixed;
+    // #{$end-direction}: 10px;
+    @include ltr(right, 16px);
+    @include rtl(left, 16px);
+    top: 23px;
+    background-color: $primary;
+    // border: 1px solid rgba(255, 255, 255, 0.473);
+    border: 0 !important;
+    border-radius: 3px;
+    // top: 20px;
+    padding: 0;
+    color: white;
+    &:focus {
+      outline: none;
+      border: 1px solid rgba(255, 255, 255, 0.705);
+    }
+  }
+  
+}
+
+.Logo {
+  padding: 14px;
+  // padding-#{$end-direction}: 3rem;
+  &:focus {
+    outline: none;
+    border: 1px solid $secondary;
+  }
+  @media screen and (max-width: 991.98px) {
+    // padding: 0;
+    // position: relative;
+    // top: 11px;
+    padding: 14px 0;
+  }
+}
+
+.NavLang {
+  & > button {
+    display: flex;
+    align-items: center;
+    color: white;
+    &:hover,
+    &:focus,
+    &:active {
+      color: #ffffff;
+    }
+    &::after {
+      content: none;
+    }
+  }
+  & > .dropdown-menu {
+    transition: 0.2s all ease;
+  }
+
+  img {
+    width: 20px;
+    height: 20px;
+    @include ltr(margin-right, 0.3rem);
+    @include rtl(margin-left, 0.3rem);
+  }
+}
+
+.Login {
+  display: flex;
+  margin: 4px;
+  padding: 10px;
+  width: 15rem;
+  justify-content: start;
+  align-items: center;
+}
+
+.LoginBtn {
+  color: $secondary !important;
+  background-color: white !important;
+}
+
+.NavName {
+  display: inline;
+  text-align: center;
+  & > button {
+    color: white;
+
+    &::after {
+      content: none;
+    }
+  }
+}

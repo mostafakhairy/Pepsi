@@ -1,0 +1,33 @@
+@import '../../../scss/main/main-ltr';
+@import '../../../scss/main/main-rtl';
+
+.list-style-1 {
+  padding: 0;
+  li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  .num {
+    // height: 40px;
+    // min-width: 40px;
+    height: 2.5rem;
+    min-width: 2.5rem;
+    border-radius: 50%;
+    background-color: #ea0727;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    // margin-#{$end-direction}: 1rem;
+    @include ltr(margin-right, 1rem);
+    @include rtl(margin-left, 1rem);
+  }
+  @media screen and (max-width: 991.98px) {
+    text-align: center;
+    li {
+      flex-flow: column;
+    }
+  }
+}

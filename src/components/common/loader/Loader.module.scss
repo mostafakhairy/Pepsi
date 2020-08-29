@@ -1,0 +1,16 @@
+@import '../../../scss/variables/variables';
+
+.CenterLoader {
+  top: 50%;
+  left: 50%;
+  color: $primary;
+}
+.Fixed {
+  position: fixed;
+}
+.Absolute {
+  position: absolute;
+}
+.Relative {
+  position: relative;
+}

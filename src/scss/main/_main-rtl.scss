@@ -1,0 +1,10 @@
+@import '../directions/direction-rtl';
+@import '../main';
+
+html[dir='rtl'] {
+  body {
+    direction: $direction;
+    text-align: $start-direction;
+    font-family: $font-ar;
+  }
+}

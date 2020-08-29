@@ -1,0 +1,40 @@
+@import '../../../scss/main/main-ltr';
+@import '../../../scss/main/main-rtl';
+
+.FooterContainer {
+  display: flex;
+  width: 100%;
+  // height: 10rem;
+  background: $primary;
+  padding: 3rem 0;
+  justify-content: center;
+  align-items: center;
+  // position: fixed;
+  // bottom: 0px;
+  // left: 0px;
+  color: white;
+  text-align: center;
+  position: relative;
+
+  clear: both;
+}
+.FooterContent {
+  width: 100%;
+  display: flex;
+    align-items: center;
+  text-align: right;
+  
+  @media screen and (max-width: 767.98px) {
+    justify-content: center;
+  }
+
+  // & > img:nth-child(1) {
+  //   margin-bottom: 1rem;
+  // }
+}
+p {
+  margin: 0;
+}
+// .FooterTexts {
+//   margin-top: 15px;
+// }

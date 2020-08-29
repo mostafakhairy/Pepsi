@@ -1,0 +1,35 @@
+@import '../../../scss/main/main-ltr';
+@import '../../../scss/main/main-rtl';
+@import '../../../scss/mixins/mixins';
+
+.breadcrumbContainer {
+  background-color: #00000005;
+  margin-top: 4rem;
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  .breadcrumb {
+    background-color: transparent !important;
+  }
+}
+
+.breadcrumb {
+  @include ltr(padding-left, 0);
+  @include rtl(padding-right, 0);
+  .icon {
+    font-size: 0.7rem;
+    height: 13px;
+    width: 13px;
+    // margin-#{$end-direction}: 0.5rem;
+    @include ltr(margin-right, 0.5rem);
+    @include rtl(margin-left, 0.5rem);
+  }
+  .breadcrumb-item {
+    display: flex;
+    align-items: center;
+    color: #afafaf;
+    &.active {
+      color: #0165c3;
+    }
+  }
+}
+

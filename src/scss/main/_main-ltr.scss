@@ -1,0 +1,10 @@
+@import '../directions/direction-ltr';
+@import '../main';
+
+html[dir='ltr'] {
+  body {
+    direction: $direction;
+    text-align: $start-direction;
+    font-family: $font-en;
+  }
+}

@@ -1,0 +1,31 @@
+// $theme-colors: (
+//   'info': tomato,
+//   'danger': teal,
+// );
+
+//THEME COLORS
+$primary: #0065c3;
+$secondary: #0480f3;
+//THEME FONTS
+
+// en fonts
+$font-en: 'SofiaPro';
+$font-bold-en: 'SofiaPro-Bold';
+$font-semibold-en: 'SofiaPro-SemiBold';
+$font-light-en: 'SofiaPro-Light';
+$font-medium-en: 'SofiaPro-Medium';
+
+// ar fonts
+$font-ar: 'GESSTextMedium-Medium';
+$font-bold-ar: 'GESSTextBold-Bold';
+$font-light-ar: 'GESSTextLight-Light';
+$font-2-ar: 'GeezaPro';
+$font-2-bold-ar: 'GeezaPro-bold';
+
+// .font-light {
+//     @include rtl(font-family, $font-light-ar);
+// }
+
+// .font-en {
+//     @include rtl(font-family, $font-en);
+// }
